@@ -1,0 +1,288 @@
+political_decisions = {
+
+	gib_gibraltar = {
+		potential = {
+			OR ={
+				tag = SPA
+				tag = SPC
+			}
+			NOT = { has_country_flag = spanish_irredentism_1 }
+			NOT = { has_country_flag = irredentism_refuted }
+		}
+
+		allow = {
+			nationalism_n_imperialism = 1
+			war = no
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			OR = {
+				ruling_party_ideology = reactionary
+				AND = {
+					war_policy = jingoism
+					prestige = 100
+				}
+			}
+			NOT = {owns = 517}
+		}
+
+		effect = {
+			badboy = 5
+			prestige = 10
+			517 = { add_core = THIS }
+			set_country_flag = spanish_irredentism_1
+			random_country = {
+				limit = {
+					owns = 517
+				}
+				country_event = 170413
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	gibraltar_gibben = {
+		potential = {
+			OR ={
+				tag = SPA
+				tag = SPC
+			}
+			NOT = { has_country_flag = spanish_irredentism_1 }
+			NOT = { has_country_flag = irredentism_refuted }
+		}
+
+		allow = {
+			nationalism_n_imperialism = 1
+			war = no
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			OR = {
+				ruling_party_ideology = reactionary
+				AND = {
+					war_policy = jingoism
+					prestige = 100
+				}
+			}
+			owns = 517
+		}
+
+		effect = {
+			badboy = 5
+			prestige = 10
+			517 = { add_core = THIS }
+			set_country_flag = spanish_irredentism_1
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	poor_portugal = {
+
+		potential = {
+			OR ={
+				tag = SPA
+				tag = SPC
+			}
+			has_country_flag = spanish_irredentism_1
+			NOT = { has_country_flag = spanish_irredentism_2 }
+			NOT = { has_country_flag = irredentism_refuted }
+			POR = { exists = yes }
+		}
+
+		allow = {
+			nationalism_n_imperialism = 1
+			invention = national_fraternity	
+			war = no
+			OR = {
+				ruling_party_ideology = reactionary
+				AND = {
+					war_policy = jingoism
+					prestige = 100
+				}
+			}
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			owns = 517
+		}
+
+		effect = {
+			badboy = 15
+			prestige = 10
+			set_country_flag = spanish_irredentism_2
+			casus_belli = {
+				target = POR
+				type = conquest_any
+				months = 12
+			}
+			POR = {
+				country_event = 170417
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	poor_poor_portugal = {
+
+		potential = {
+			OR ={
+				tag = SPA
+				tag = SPC
+			}
+			has_country_flag = spanish_irredentism_1
+			NOT = { has_country_flag = spanish_irredentism_2 }
+			NOT = { has_country_flag = irredentism_refuted }
+			POR = { exists = no }
+		}
+
+		allow = {
+			nationalism_n_imperialism = 1
+			invention = national_fraternity	
+			war = no
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			owns = 517
+			OR = {
+				ruling_party_ideology = reactionary
+				AND = {
+					war_policy = jingoism
+					prestige = 100
+				}
+			}		
+		}
+		effect = {
+			prestige = 10
+			set_country_flag = spanish_irredentism_2
+			set_country_flag = iberia_united
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	rule_rousillon = {
+		potential = {
+			OR ={
+				tag = SPA
+				tag = SPC
+			}
+			has_country_flag = spanish_irredentism_1
+			has_country_flag = spanish_irredentism_2
+			has_country_flag = iberia_united			
+			NOT = { has_country_flag = spanish_irredentism_3 }
+			NOT = { has_country_flag = irredentism_refuted }
+		}
+
+		allow = {
+			nationalism_n_imperialism = 1
+			invention = national_fraternity	
+			war = no
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			owns = 517
+			OR = {
+				ruling_party_ideology = reactionary
+				AND = {
+					war_policy = jingoism
+					prestige = 100
+				}
+			}
+		}
+
+		effect = {
+			badboy = 7
+			prestige = 10
+			set_country_flag = spanish_irredentism_3
+			464 = { add_core = THIS }
+			random_country = {
+				limit = {
+					owns = 464
+				}
+				country_event = 170420
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	initialise_iberia = {
+		potential = {
+			OR ={
+				tag = SPA
+				tag = SPC
+			}
+			has_country_flag = spanish_irredentism_1
+			has_country_flag = spanish_irredentism_2			
+			has_country_flag = spanish_irredentism_3 
+			NOT = { has_country_flag = irredentism_refuted }
+			has_country_flag = iberia_united
+		}
+
+		allow = {
+			nationalism_n_imperialism = 1
+			invention = national_fraternity	
+			war = no
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			owns = 517
+			owns = 464
+		}
+
+		effect = {
+			prestige = 25
+			set_global_flag = created_iberia
+			all_core = { add_core = IBR }
+			SPC = {
+				all_core = {
+					remove_core = SPC
+					add_core = IBR
+				}
+			}
+			SPA = {
+				all_core = {
+					remove_core = SPA
+					add_core = IBR
+				}
+			}
+			POR = {
+				all_core = { add_core = IBR }
+			}
+			random_country = {
+				limit = {
+					tag = POR
+					exists = yes
+					OR = {
+						vassal_of = SPA
+						vassal_of = SPC
+					}
+				}
+				annex_to = THIS
+			}
+			change_tag = IBR
+
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

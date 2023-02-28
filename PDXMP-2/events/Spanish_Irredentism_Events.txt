@@ -1,0 +1,569 @@
+country_event = {
+	id = 170413
+	title = "EVTNAME170413" #Spain Demands Gibraltar!
+	desc = "EVTDESC170413"
+	picture = "conscription_marching"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT170413OPTA" #Declare on Spain
+		set_global_flag = anglo_spanish_war
+		any_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+			}
+			relation = { who = THIS value = -200 }
+			leave_alliance = THIS
+			random_owned = {
+				limit = { exists = SPA }
+				owner = {
+					war = {
+						target = THIS
+						attacker_goal = {
+							casus_belli = acquire_all_cores 
+							country = THIS
+						}
+						defender_goal = {
+							casus_belli = cut_down_to_size 
+							country = THIS
+						}
+					}				
+				}
+			}
+			random_owned = {
+				limit = { exists = SPC }
+				owner = {
+					war = {
+						target = THIS				
+						attacker_goal = {
+							casus_belli = acquire_all_cores 
+							country = SPC
+						}
+						defender_goal = {
+							casus_belli = cut_down_to_size 
+							country = THIS
+						}
+					}				
+				}
+			}
+
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+	option = {
+		name = "EVT170413OPTB" #Ignore Spain
+		set_global_flag = anglo_spanish_standoff
+		prestige_factor = 25
+		any_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+			}
+			relation = { who = ENG value = -200 }
+			leave_alliance = ENG
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+	option = {
+		name = "EVT170413OPTC"
+		set_global_flag = no_anglo_spanish_war
+		prestige_factor = -0.2
+		any_pop = {
+			consciousness = 1
+			militancy = 1
+		}
+		badboy = -2
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 170414
+	title = "EVTNAME170414" #Gibraltar Surrendered
+	desc = "EVTDESC170414"
+	fire_only_once = yes
+	picture = "treaty"
+
+	trigger = {
+		OR = {
+			tag = SPA
+			tag = SPC
+		}
+		AND = {
+			has_global_flag = no_anglo_spanish_war
+			NOT = {owns = 517}
+		}		
+	}
+	mean_time_to_happen = {
+		days = 1
+	}	
+	option = {
+		name = "EVT170414OPT"
+		517 = {
+			remove_core = ENG
+			secede_province = THIS
+		}
+		prestige_factor = 0.1
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 170415
+	title = "EVTNAME170415" #Spain Victorious
+	desc = "EVTDESC170415"
+	fire_only_once = yes
+	picture = "crimean_war_defeat"
+
+	trigger = {
+		tag = ENG
+		OR = {
+			has_global_flag = anglo_spanish_war
+			has_global_flag = anglo_spanish_standoff
+		}
+		NOT = {owns = 517}
+		war = no
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "EVT170415OPT"
+		prestige_factor = -0.3
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 170416
+	title = "EVTNAME170416" #Spain Defeat
+	desc = "EVTDESC170416"
+	fire_only_once = yes
+	picture = "crimean_war_defeat"
+
+	trigger = {
+		OR = {
+			tag = SPA
+			tag = SPC
+		}
+		OR = {
+			AND = {
+				has_global_flag = anglo_spanish_war
+				NOT = {owns = 517}
+			}
+			AND = {
+				is_disarmed = yes
+				has_global_flag = anglo_spanish_standoff
+			}
+		}
+		war = no
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "EVT170416OPT"
+		517 = {
+			remove_core = THIS
+		}
+		set_country_flag = irredentism_refuted
+		ai_chance = {
+			factor = 100
+		}
+
+	}
+}
+
+
+country_event = {
+	id = 170417
+	title = "EVTNAME170417" #Spain Threatens Portugal
+	desc = "EVTDESC170417"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT170417OPTA" #Declare on Spain
+		set_global_flag = iberian_war
+		FRA = {
+			relation = {
+				who = POR
+				value = 200
+			}
+			diplomatic_influence = {
+				who = POR
+				value = 400
+			}
+		}
+		ENG = {
+			relation = {
+				who = POR
+				value = 200
+			}
+			diplomatic_influence = {
+				who = POR
+				value = 400
+			}
+		}
+		any_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+			}
+			relation = { who = POR value = -200 }
+			leave_alliance = POR
+			diplomatic_influence = { who = POR value = -400 }
+			random_owned = {
+				limit = { exists = SPA }
+				owner = {
+					war = {
+						target = POR
+						attacker_goal = {
+							casus_belli = conquest_any 
+							country = SPA
+						}
+					}				
+				}
+			}
+			random_owned = {
+				limit = { exists = SPC }
+				owner = {
+					war = {
+						target = POR				
+						attacker_goal = {
+							casus_belli = conquest_any 
+							country = SPC
+						}
+					}				
+				}
+			}
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+
+	option = {
+		name = "EVT170417PTB"
+		set_global_flag = no_iberian_war
+		prestige_factor = -0.1
+		any_pop = {
+			consciousness = 1
+			militancy = 1
+		}
+		any_owned = {
+			add_province_modifier = {
+				name = nationalist_agitation
+				duration = 730
+			}
+		}
+		any_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+			}
+			random_owned = {
+				limit = { exists = SPA }
+				owner = {
+					create_vassal = POR
+					create_alliance = POR
+					set_country_flag = iberia_united
+					diplomatic_influence = {
+						who = POR
+						value = 400
+					}	
+				}
+			}
+			random_owned = {
+				limit = { exists = SPC }
+				owner = {
+					create_vassal = POR
+					create_alliance = POR
+					set_country_flag = iberia_united
+					diplomatic_influence = {
+						who = POR
+						value = 400
+					}			
+				}
+			}
+		}
+			
+		
+		
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+country_event = {
+	id = 170418
+	title = "EVTNAME170418" #Failure to take Lisbon
+	desc = "EVTDESC170418"
+	fire_only_once = yes
+	picture = "treaty"
+
+	trigger = {
+		OR = {
+			tag = SPA
+			tag = SPC
+		}
+		has_global_flag = iberian_war
+		war = no
+		NOT = {owns = 521}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "EVT170418OPT"
+		set_country_flag = irredentism_refuted
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 170419
+	title = "EVTNAME170419" #Lisbon Conquered
+	desc = "EVTDESC170419"
+	fire_only_once = yes
+	picture = "treaty"
+
+	trigger = {
+		OR = {
+			tag = SPA
+			tag = SPC
+		}
+		has_global_flag = iberian_war
+		war = no
+		owns = 521
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "EVT170419OPT"
+		set_country_flag = iberia_united
+		any_owned = {
+		limit = { is_core = POR }
+			add_province_modifier = {
+				name = nationalist_agitation
+				duration = 730
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 170420
+	title = "EVTNAME170420" #Spain Demands Perpignan!
+	desc = "EVTDESC170420"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT170420OPTA" #Declare on Spain
+		set_global_flag = franco_spanish_war
+		any_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+			}
+			relation = { who = THIS value = -200 }
+			leave_alliance = THIS
+			random_owned = {
+				limit = { exists = SPA }
+				owner = {
+					war = {
+						target = THIS
+						attacker_goal = {
+							casus_belli = acquire_all_cores 
+							country = SPA
+						}
+						defender_goal = {
+							casus_belli = cut_down_to_size 
+							country = THIS
+						}
+					}				
+				}
+			}
+			random_owned = {
+				limit = { exists = SPC }
+				owner = {
+					war = {
+						target = THIS				
+						attacker_goal = {
+							casus_belli = acquire_all_cores 
+							country = SPC
+						}
+						defender_goal = {
+							casus_belli = cut_down_to_size 
+							country = THIS
+						}
+					}				
+				}
+			}
+
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+	option = {
+		name = "EVT170420OPTB" #Ignore Spain
+		set_global_flag = franco_spanish_standoff
+		prestige_factor = 25
+		any_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+			}
+			relation = { who = THIS value = -200 }
+			leave_alliance = THIS
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+	option = {
+		name = "EVT170420OPTC"
+		set_global_flag = no_franco_spanish_war
+		prestige_factor = -0.2
+		any_pop = {
+			consciousness = 1
+			militancy = 1
+		}
+		badboy = -2
+		any_country = {
+			limit = {
+				OR = {
+					tag = SPA
+					tag = SPC
+				}
+			}
+			event = 170421
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = 170421
+	title = "EVTNAME170421" #Perpignan Surrendered
+	desc = "EVTDESC170421"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT1704154OPT"
+		464 = {
+			remove_core = FRA
+			secede_province = THIS
+		}
+		prestige_factor = 0.1
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 170422
+	title = "EVTNAME170422" #Spain Victorious Again
+	desc = "EVTDESC170422"
+	fire_only_once = yes
+	picture = "crimean_war_defeat"
+
+	trigger = {
+		tag = FRA
+		OR = {
+			has_global_flag = franco_spanish_war
+			has_global_flag = franco_spanish_standoff
+		}
+		NOT = {owns = 464}
+		war = no
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "EVT170422OPT"
+		prestige_factor = -0.2
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 170423
+	title = "EVTNAME170423" #Spain Defeat
+	desc = "EVTDESC170423"
+	fire_only_once = yes
+	picture = "crimean_war_defeat"
+
+	trigger = {
+		OR = {
+			tag = SPA
+			tag = SPC
+		}
+		OR = {
+			AND = {
+				has_global_flag = franco_spanish_war
+				NOT = {owns = 464}
+			}
+			AND = {
+				is_disarmed = yes
+				has_global_flag = franco_spanish_standoff
+			}
+		}
+		war = no
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "EVT170423OPT"
+		464 = {
+			remove_core = THIS
+		}
+		set_country_flag = irredentism_refuted
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

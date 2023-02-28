@@ -1,0 +1,106 @@
+;;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
+EVNTNAME1;Placeholder;;;;;;;;;;;;x
+EVNTDESC1;Placeholder;;;;;;;;;;;;x
+EVNTOPTA1;Placeholder;;;;;;;;;;;;x
+EVNTOPTB1;Placeholder;;;;;;;;;;;;x
+revanchism;Revanchism;Revanchisme;Revanchismus;;Revanchismo;;;;;;;;;x
+revanchism;§WRevanchism;Revanchisme;Revanchismus;;Revanchismo;;;;;;;;;x;
+REVANCHISM_EXPLANATION;§gRevanchism, from the French word for 'revenge', is the yearning for the return of land lost to the nation. In love, war, and peace alike, our people will be willing to make greater sacrifices for the return of our sacred soil.\n§YEvery 5 points of revanchism raises maximum soldier % in a core province by 0.5% and mobilization pool by 0.5%.;;;;;;;;;;;;;;
+province_selector;Province Selector;;;;;;;;;;;;x
+PS_unlocked;PS Building Unlocked;;;;;;;;;;;;;x
+PS_unlocked_desc;You can now build Province Selector buildings.;;;;;;;;;;;;;x
+zcreate_supply_depot_title;Create Supply Depot;;;;;;;;;;;;;x
+zcreate_supply_depot_desc;A province with a supply depot will reduce attrition to 0 regardless of supply cap and should be used as a rallying point for mobilized troops. You can only have one supply depot at a time, it must not be overseas, and if a battle occurs in a province with a supply depot or the province is occupied by an enemy army it will be destroyed.;;;;;;;;;;;;;x
+zdismantle_supply_depot_title;Dismantle Supply Depot;;;;;;;;;;;;;x
+zdismantle_supply_depot_desc;Removes the Supply Depot modifier from all provinces.;;;;;;;;;;;;;x
+zzreset_province_selector_title;Reset Province Selector;;;;;;;;;x;;;;
+zzreset_province_selector_desc;Destroys all currently built province selectors.;;;;;;;;;x;;;;
+supply_depot;Supply Depot;;;;;;;;;;;;;x
+supply_depot_destroyed;Supply Depot Recently Destroyed;;;;;;;;;;;;;x
+supply_depot_destroyed_desc;We require time to procure new supplies before we can build another supply depot.;;;;;;;;;;;;;x
+save_the_nation0.5;Revanchism 1;;;;;;;;;;;;;x
+save_the_nation1;Revanchism 2;;;;;;;;;;;;;x
+save_the_nation1.5;Revanchism 3;;;;;;;;;;;;;x
+save_the_nation2;Revanchism 4;;;;;;;;;;;;;x
+save_the_nation2.5;Revanchism 5;;;;;;;;;;;;;x
+save_the_nation3;Revanchism 6;;;;;;;;;;;;;x
+save_the_nation3.5;Revanchism 7;;;;;;;;;;;;;x
+save_the_nation4;Revanchism 8;;;;;;;;;;;;;x
+save_the_nation4.5;Revanchism 9;;;;;;;;;;;;;x
+save_the_nation5;Revanchism 10;;;;;;;;;;;;;x
+military_fully_funded;Military Fully Funded;;;;;;;;;;;;;x
+abandoned_serfs;Abandoned the Serfs;;;;;;;;;;;;;x
+land_and_freedom;Land and Freedom;;;;;;;;;;;;;x
+repaying_nobles;Repaying Nobles;;;;;;;;;;;;;x
+buying_land;Buying Land from Nobility;;;;;;;;;;;;;x
+low_conscription_rate;Low Conscription Size;;;;;;;;;;;;;x
+medium_conscription_rate;Medium Conscription Size;;;;;;;;;;;;;x
+high_conscription_rate;High Conscription Size;;;;;;;;;;;;;x
+set_low_conscription_title;Set Low Conscription Size;;;;;;;;;;;;;x
+set_medium_conscription_title;Set Medium Conscription Size;;;;;;;;;;;;;x
+set_high_conscription_title;Set High Conscription Size;;;;;;;;;;;;;x
+set_max_conscription_title;Set Max Conscription Size;;;;;;;;;;;;;x
+set_low_conscription_desc;Apply a -300% debuff to your mobilization size to cut costs. Can be done and undone any time.;;;;;;;;;;;;;x
+set_medium_conscription_desc;Apply a -200% debuff to your mobilization size to cut costs. Can be done and undone any time.;;;;;;;;;;;;;x
+set_high_conscription_desc;Set Apply a -100% debuff to your mobilization size to cut costs. Can be done and undone any time.;;;;;;;;;;;;;x
+set_max_conscription_desc;Return your mobilization size to the base level. Can be done and undone any time.;;;;;;;;;;;;;x
+EVTNAME91320;Supply Depot Destroyed;;;;;;;;;;;;;x
+EVTDESC91320;Our supply depot in $PROVINCENAME$ has been destroyed in the recent fighting.;;;;;;;;;;;;;x
+EVTOPTA91320;Damn!;;;;;;;;;;;;;x
+EVTNAME325470;The Question of Compensation;;;;;;;;;;;;;x
+EVTDESC325470;Now that serfdom has been abolished, the nobility is demanding compensation for their lost property and the newly emancipated peasants clamor for land of their own. We can put this financial burden on the shoulders of the ex-serfs, take on the debt of the emancipated ourselves but leave them to buy their own land, or purhase both freedom and land for the ex-serfs.;;;;;;;;;;;;;x
+EVT325470OPTA;There's no such thing as a free lunch, after all.;;;;;;;;;;;;;x
+EVT325470OPTB;Let us pay for the serfs' freedom, but they should earn their keep.;;;;;;;;;;;;;x
+EVT325470OPTC;Let us compensate these poor souls fully for their years of servitude.;;;;;;;;;;;;;x
+autonomy;Increased Local Autonomy;;;;;;;;;;;;;x
+italy_administration;Italian Administration (you're under 100% admin spending);;;;;;;;;;;;;x
+the_rhine_crisis2_title;The Left Bank;La rive gauche;Das linke Ufer;;La orilla izquierda;;;;;;;;;x
+the_rhine_crisis2_desc;During Napoleon's redrawings of the European map, the left bank of the river Rhine had been annexed to France proper. In 1840 France's Prime Minister Adolphe Thiers publicly stated that, in his opinion, the Rhine still remained France's natural eastern border. With the hardships of the Napoleonic wars still in living memory the statement caused uproar in Germany, sparking what would become known as 'The Rhine Crisis';Lorsque Napol�on redessina la carte de l 'Europe, la rive gauche du Rhin fut annex�e par la France. En 1840, le Premier ministre Adolphe Thiers affirma publiquement, qu�� son avis, le Rhin demeurait la fronti�re orientale naturelle de la France. Le souvenir des temps difficiles des guerres napol�oniennes encore pr�sent dans les m�moire fit que cette d�claration leva un toll� de protestations en Allemagne, donnant naissance � ce qui serait connu sous le nom de ��Crise du Rhin��.;Im Zuge der Neugestaltung der europ�ischen Karte durch Napoleon war das linke Rheinufer von Frankreich annektiert worden. Im Jahr 1840 gab Adolphe Thiers, der franz�sische Premierminister, bekannt, dass der Rhein seiner Meinung nach immer noch Frankreichs nat�rliche Ostgrenze darstelle. Diese Aussage f�hrte in Deutschland vor dem Hintergrund der Schrecken der napoleonischen Kriege zu einem Aufschrei und f�hrte schlie�lich zur sogenannten 'Rheinkrise'.;;Durante la reorganizaci�n del territorio europeo llevada a cabo por Napole�n, la orilla izquierda del Rhin hab�a sido anexionada por Francia. En 1840, el primer ministro de este pa�s, Adolphe Thiers, afirm� p�blicamente que, en su opini�n, el Rhin segu�a siendo la frontera natural de Francia. Con las penurias provocadas por las guerras napole�nicas todav�a en el recuerdo de muchos, esta declaraci�n provocar�a una oleada de indignaci�n en Alemania y ser�a la chispa que har�a saltar lo que se conocer�a como 'La crisis del Rhin'.;;;;;;;;;x
+the_rhine_crisis3_title;The Left Bank;La rive gauche;Das linke Ufer;;La orilla izquierda;;;;;;;;;x
+the_rhine_crisis3_desc;During Napoleon's redrawings of the European map, the left bank of the river Rhine had been annexed to France proper. In 1840 France's Prime Minister Adolphe Thiers publicly stated that, in his opinion, the Rhine still remained France's natural eastern border. With the hardships of the Napoleonic wars still in living memory the statement caused uproar in Germany, sparking what would become known as 'The Rhine Crisis';Lorsque Napol�on redessina la carte de l 'Europe, la rive gauche du Rhin fut annex�e par la France. En 1840, le Premier ministre Adolphe Thiers affirma publiquement, qu�� son avis, le Rhin demeurait la fronti�re orientale naturelle de la France. Le souvenir des temps difficiles des guerres napol�oniennes encore pr�sent dans les m�moire fit que cette d�claration leva un toll� de protestations en Allemagne, donnant naissance � ce qui serait connu sous le nom de ��Crise du Rhin��.;Im Zuge der Neugestaltung der europ�ischen Karte durch Napoleon war das linke Rheinufer von Frankreich annektiert worden. Im Jahr 1840 gab Adolphe Thiers, der franz�sische Premierminister, bekannt, dass der Rhein seiner Meinung nach immer noch Frankreichs nat�rliche Ostgrenze darstelle. Diese Aussage f�hrte in Deutschland vor dem Hintergrund der Schrecken der napoleonischen Kriege zu einem Aufschrei und f�hrte schlie�lich zur sogenannten 'Rheinkrise'.;;Durante la reorganizaci�n del territorio europeo llevada a cabo por Napole�n, la orilla izquierda del Rhin hab�a sido anexionada por Francia. En 1840, el primer ministro de este pa�s, Adolphe Thiers, afirm� p�blicamente que, en su opini�n, el Rhin segu�a siendo la frontera natural de Francia. Con las penurias provocadas por las guerras napole�nicas todav�a en el recuerdo de muchos, esta declaraci�n provocar�a una oleada de indignaci�n en Alemania y ser�a la chispa que har�a saltar lo que se conocer�a como 'La crisis del Rhin'.;;;;;;;;;x
+french_rhineland_secure_title;The Wealth of the Rhine;;;;;;;;;;;;;x
+french_rhineland_secure_desc;With the resources of the left bank of the Rhine now under our control, the french nation will enter a period of unprecedented prosperity!;;;;;;;;;x
+french_wallonia_secure_title;The Wealth of Wallonia;;;;;;;;;;;;;x
+french_wallonia_secure_desc;With the resources of Wallonia now under our control, the french nation will enter a period of unprecedented prosperity!;;;;;;;;;x
+EVTNAME98790;Ukrainians Agree to Federation;;;;;;;;;;;;;
+EVTDESC98790;After much discussion and deliberation, the Ukrainians have agreed to the proposed Danubian Federation without reservation.;;;;;;;;;;;;;
+EVTNAME98791;The Ukrainian Counter-Proposal;;;;;;;;;;;;;
+EVTDESC98791;After much discussion and deliberation, the Ukrainians have agreed to the proposed Danubian Federation... on one condition: that they be given greater autonomy within the federation. We can ignore their proposal, but not without causing a great deal of discontent among the Ukrainian people. Sadly, this appears to be as far as they will go on the matter.;;;;;;;;;;;;;
+EVT98791OPTB;We agree. Ruthenia will be a vassal state of the new federation.;;;;;;;;;;;;;
+EVTNAME98792;The Ukrainians Refuse Federation;;;;;;;;;;;;;
+EVTDESC98792;After much discussion and deliberation, the Ukrainians have outright refused the proposed federation. We can ignore their refusal and proceed with the federation anyhow, but not without upsetting the Ukrainian people greatly.;;;;;;;;;;;;;
+EVTNAME98793;Ukrainians Celebrate the New Federation!;;;;;;;;;;;;;
+EVTDESC98793;Ukrainian citizens have gathered in cities throughout the country to celebrate the federation and their newly-acquired equal status within it.;;;;;;;;;;;;;
+EVT98793OPTA;We welcome our Ukrainian brothers.;;;;;;;;;;;;;
+EVTNAME98794;The New Ruthenian State;;;;;;;;;;;;;
+EVTDESC98794;Citizens gathered in the Ruthenian capital today to celebrate its beginning as a new state, autonomous but still tied to the federation.;;;;;;;;;;;;;
+EVTNAME98795;The Ukrainian Rebellion;;;;;;;;;;;;;
+EVTDESC98795;Resentment has been brewing among the Ukrainians ever since the federation's formation. Their leaders have been loudly proclaiming that German officials proceeded regardless of Ukrainian concerns. In some cities, the protests have even become violent and authorities report difficulty in keeping things under control.;;;;;;;;;;;;;
+EVTNAME800050;The Power of Tradition;;;;;;;;;;;;;
+EVTDESC800050;Reactionary elements have taken over the $COUNTRY_ADJ$ government, and their influence is felt both here and abroad. Their leadership has already begun to institute widespread changes in the government, while crowds cheer from the central square in $CAPITAL$.;;;;;;;;;;;;;
+EVT800050OPTA;Embrace the ideal of Tradition;;;;;;;;;;;;;
+EVTNAME800051;The New $COUNTRY_ADJ$ Order;;;;;;;;;;;;;
+EVTDESC800051;Fascist elements have taken over the $COUNTRY_ADJ$ government, and their influence is felt both here and abroad. Their leadership has already begun to institute widespread changes in the government, while crowds cheer from the central square in $CAPITAL$.;;;;;;;;;;;;;
+EVT800051OPTA;Embrace the ideal of Autocracy;;;;;;;;;;;;;
+EVT800051OPTB;Embrace the ideal of Order;;;;;;;;;;;;;
+EVTNAME800052;The New Communist Regime;;;;;;;;;;;;;
+EVTDESC800052;Communists have taken over the $COUNTRY_ADJ$ government, and their influence is felt both here and abroad. Their leadership has already begun to institute widespread changes in the government, while crowds cheer from the central square in $CAPITAL$.;;;;;;;;;;;;;
+EVT800052OPTA;Embrace the ideal of Equality;;;;;;;;;;;;;
+EVT800052OPTB;Embrace the ideal of Order;;;;;;;;;;;;;
+EVT800052OPTV;Embrace the ideal of Productivity;;;;;;;;;;;;;
+EVTNAME800053;A New Order in $COUNTRY$;;;;;;;;;;;;;
+EVTDESC800053;Liberal extremists have taken over the $COUNTRY_ADJ$ government, dedicated to political reforms but opposed to social reform of any kind. They have already instituted a large number of changes within the $COUNTRY_ADJ$ government, while crowds cheer from the central square in $CAPITAL$.;;;;;;;;;;;;;
+EVT800053OPTA;Embrace the ideal of Liberty;;;;;;;;;;;;;
+EVTNAME800054;The New Liberal Regime;;;;;;;;;;;;;
+EVTDESC800054;Cheering crowds in $CAPITAL$ are celebrating the toppling of the old $COUNTRY_ADJ$ government, now replaced by a new and liberal order dedicated to political reform within all levels of the $COUNTRY_ADJ$ government. Despite their recent ascent to power, they have already begun to institute changes in $COUNTRY$ that are being felt here and abroad.;;;;;;;;;;;;;
+EVT800054OPTA;Embrace the ideal of Liberty;;;;;;;;;;;;;
+EVT800054OPTB;Embrace the ideal of Productivity;;;;;;;;;;;;;
+EVTNAME810055;$COUNTRY_ADJ$ Independence!;;;;;;;;;;;;;
+EVTDESC810055;Rebel leaders have announced from $CAPITAL$ that $COUNTRY$ has at last achieved independence. What this means for $COUNTRY$'s future is so far unknown, but for the moment it seems that the government will proceed intact -- save for the fact that it is no longer beholden to its former overlord.;;;;;;;;;;;;;
+EVT810055OPTA;A new future for $COUNTRY$!;;;;;;;;;;;;;
+EVTNAME810056;The New Socialist Regime;;;;;;;;;;;;;
+EVTDESC810056;Cheering crowds in $CAPITAL$ are celebrating the toppling of the old $COUNTRY_ADJ$ government, now replaced by a new and socialist order dedicated to social reform within all levels of the $COUNTRY_ADJ$ government. Despite their recent ascent to power, they have already begun to institute changes in $COUNTRY$ that are being felt here and abroad.;;;;;;;;;;;;;
+EVT810056OPTA;Embrace the ideal of Equality;;;;;;;;;;;;;
+EVT810056OPTB;Embrace the ideal of Liberty;;;;;;;;;;;;;
+form_germany_emergency_title;The German Call to Union;;;;;;;;;;;;;
+form_germany_emergency_desc;With the loss of the Rhine and Palatinate to the french, the minor german nations are scrambling for a means of common security. We will take up the banner of a new united German nation and free the Germans under French control!;;;;;;;;;;;;;

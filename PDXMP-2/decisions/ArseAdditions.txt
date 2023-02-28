@@ -1,0 +1,177 @@
+political_decisions = {
+zzreset_province_selector = {
+		picture = province_selector
+		potential = {
+			ai = no
+		}	
+		allow = {
+			any_owned_province = { has_building = province_selector }
+		}
+		effect = {
+			any_owned = {
+				limit = {
+					has_building = province_selector
+				}
+				province_selector = -1
+			}
+		}
+	}
+
+    set_low_conscription = {
+        alert = no
+        picture = marching_soldiers
+        potential = {
+            civilized = yes
+            has_country_flag = government_decisions_on
+        }
+
+        allow = {
+            NOT = {
+                has_country_flag = conscription_low
+            }
+         }
+
+        effect = {
+            clr_country_flag = conscription_medium
+            clr_country_flag = conscription_high
+            set_country_flag = conscription_low
+
+            remove_country_modifier = high_conscription_rate
+            remove_country_modifier = medium_conscription_rate
+            add_country_modifier = { name = low_conscription_rate duration = -1 }
+        }
+
+        ai_will_do = {
+            factor = 0
+        }    
+    }
+
+    set_medium_conscription = {
+        alert = no
+        picture = marching_soldiers
+        potential = {
+            civilized = yes
+            has_country_flag = government_decisions_on
+        }
+
+        allow = {
+            NOT = {
+                has_country_flag = conscription_medium
+            }
+         }
+
+         effect = {
+            clr_country_flag = conscription_low
+            clr_country_flag = conscription_high
+            set_country_flag = conscription_medium
+
+            remove_country_modifier = high_conscription_rate
+            remove_country_modifier = low_conscription_rate
+            add_country_modifier = { name = medium_conscription_rate duration = -1 }
+         }
+
+         ai_will_do = {
+            factor = 0
+        }
+    }
+
+    set_high_conscription = {
+        alert = no
+        picture = marching_soldiers
+        potential = {
+            civilized = yes
+            has_country_flag = government_decisions_on
+        }
+
+        allow = {
+            NOT = {
+                has_country_flag = conscription_high
+            }
+         }
+
+        effect = {
+            clr_country_flag = conscription_low
+            clr_country_flag = conscription_medium
+            set_country_flag = conscription_high
+
+            remove_country_modifier = medium_conscription_rate
+            remove_country_modifier = low_conscription_rate
+            add_country_modifier = { name = high_conscription_rate duration = -1 }
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+    }
+
+    set_max_conscription = {
+        alert = no
+        picture = marching_soldiers
+        potential = {
+            civilized = yes
+            has_country_flag = government_decisions_on
+        }
+
+        allow = {
+            OR = {
+                has_country_flag = conscription_medium
+                has_country_flag = conscription_low
+                has_country_flag = conscription_high
+            }
+        }
+
+        effect = {
+            clr_country_flag = conscription_low
+            clr_country_flag = conscription_high
+            clr_country_flag = conscription_medium
+
+            remove_country_modifier = high_conscription_rate
+            remove_country_modifier = low_conscription_rate
+            remove_country_modifier = medium_conscription_rate
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+
+    zcreate_supply_depot = {
+        picture = supply_depot
+        alert = yes
+        potential = {
+            NOT = { any_owned_province = { has_province_modifier = supply_depot } }
+            ai = no
+        }
+        allow = {
+            money = 500000
+            any_owned_province = { has_building = province_selector }
+        }
+        effect = {
+            treasury = -500000
+            random_owned = {
+                limit = { has_building = province_selector }
+                add_province_modifier = { name = supply_depot duration = -1 }
+                province_selector = -1
+            }
+        }
+    }
+
+    zdismantle_supply_depot = {
+        picture = supply_depot
+        alert = no
+        potential = {
+            any_owned_province = { has_province_modifier = supply_depot }
+            ai = no
+        }
+        allow = {
+        }
+        effect = {
+            any_owned = {
+                limit = { has_province_modifier = supply_depot }
+                remove_province_modifier = supply_depot
+            }
+        }
+    }
+}

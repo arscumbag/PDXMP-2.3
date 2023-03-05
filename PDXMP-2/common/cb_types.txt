@@ -9521,7 +9521,6 @@ war_reparations = {
             has_country_flag = in_great_war
         }
         THIS = {
-            civilized = yes
             NOT = { has_country_modifier = neutrality_modifier }
         }
     }

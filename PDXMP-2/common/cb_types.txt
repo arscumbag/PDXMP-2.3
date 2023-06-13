@@ -2972,7 +2972,7 @@ release_puppet = {
     is_triggered_only = yes
     months = 12
 
-    badboy_factor = 1
+    badboy_factor = 0.5
     prestige_factor = 1
     peace_cost_factor = 5
     penalty_factor = 1
@@ -3650,7 +3650,7 @@ place_in_the_sun = {
     is_triggered_only = yes
     months = 12
 
-    badboy_factor = 0.5
+    badboy_factor = 0.25
     prestige_factor = 2
     peace_cost_factor = 0.3
     penalty_factor = 1
@@ -3852,7 +3852,7 @@ acquire_state = {
 
     construction_speed = 0.5
 
-    badboy_factor = 2.2
+    badboy_factor = 2
     prestige_factor = 2
     peace_cost_factor = 1
     penalty_factor = 1
@@ -4375,7 +4375,6 @@ demand_concession_casus_belli = {
         OR = {
             THIS = { NOT = { nationalism_n_imperialism = 1 } }
             NOT = { has_global_flag = berlin_conference }
-            civilization_progress = 0.6
             has_country_flag = post_colonial_country
         }
         OR = {
@@ -4384,7 +4383,6 @@ demand_concession_casus_belli = {
                 THIS = { nationalism_n_imperialism = 1 }
                 capital_scope = { continent = africa }
             }
-            civilization_progress = 0.6
             has_country_flag = post_colonial_country
         }
         OR = {
@@ -4584,7 +4582,6 @@ demand_concession_NI_casus_belli = {
         OR = {
             war_with = THIS
             NOT = {
-                civilization_progress = 0.6
                 has_country_flag = post_colonial_country
             }
             AND = {
@@ -4788,7 +4785,6 @@ demand_concession_BC_casus_belli = {
             war_with = THIS
             NOT = {
                 has_country_modifier = neutrality_modifier
-                civilization_progress = 0.6
                 has_country_flag = post_colonial_country
             }
             AND = {
@@ -6848,12 +6844,10 @@ establish_protectorate_casus_belli = {
         OR = {
             THIS = { NOT = { nationalism_n_imperialism = 1 } }
             NOT = { has_global_flag = berlin_conference }
-            civilization_progress = 0.6
             has_country_flag = post_colonial_country
         }
         OR = {
             THIS = { NOT = { nationalism_n_imperialism = 1 } }
-            civilization_progress = 0.6
             has_country_flag = post_colonial_country
             AND = {
                 THIS = { nationalism_n_imperialism = 1 }
@@ -7000,7 +6994,6 @@ establish_protectorate_NI_casus_belli = {
         OR = {
             war_with = THIS
             NOT = {
-                civilization_progress = 0.6
                 has_country_flag = post_colonial_country
             }
             AND = {
@@ -7170,7 +7163,6 @@ establish_protectorate_BC_casus_belli = {
         OR = {
             war_with = THIS
             NOT = {
-                civilization_progress = 0.6
                 has_country_flag = post_colonial_country
             }
             AND = {
@@ -8004,7 +7996,7 @@ acquire_unciv_substate_region = {
 
     construction_speed = 0.5
 
-    badboy_factor = 1.5
+    badboy_factor = 1.25
     prestige_factor = 2
     peace_cost_factor = 1
     penalty_factor = 1
@@ -8038,7 +8030,6 @@ acquire_unciv_substate_region = {
             }
         }
     }
-
     allowed_substate_regions = {
         is_colonial = no
         #owner = { NOT = { in_sphere = THIS } }
@@ -8077,7 +8068,7 @@ acquire_substate_region = {
 
     construction_speed = 0.5
 
-    badboy_factor = 2.2
+    badboy_factor = 2
     prestige_factor = 2
     peace_cost_factor = 1
     penalty_factor = 1

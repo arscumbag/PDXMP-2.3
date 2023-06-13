@@ -92,6 +92,7 @@ tractors = {
 		rgo_goods_output = { opium = 0.03 }
 		rgo_goods_output = { fruit = 0.03 }
 		rgo_goods_output = { cattle = 0.03 }
+        farm_rgo_eff = 0.3
 	}
 }
 #electrical_power_generation
@@ -392,6 +393,7 @@ machine_tools = {
 			machine_parts = 0.05
 		}
 		factory_throughput = 0.05
+        mine_RGO_eff = 0.3
 	}
 }
 whitney_n_colts_standardized_small_arms = {
@@ -1416,8 +1418,10 @@ nitroglycerin = {
 	}
 	effect = {
 		factory_goods_output = {
+            
 			explosives = 0.02
 		}
+        mine_RGO_eff = 0.3
 	}
 }
 #inorganic_chemistry

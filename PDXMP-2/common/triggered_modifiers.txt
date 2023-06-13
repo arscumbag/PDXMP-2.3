@@ -668,10 +668,10 @@ blockade_1 = {
         exists = yes
     }
 
-    global_pop_militancy_modifier = 0.01       
-    global_pop_consciousness_modifier = 0.01
+    global_pop_militancy_modifier = 0.04       
+    global_pop_consciousness_modifier = 0.04
     import_cost = 0.2                          #+20% import costs                         
-    factory_input = 0.2                        #need 2% more input in factories
+    factory_input = 0.02                        #need 2% more input in factories
     icon = 16
 }
 
@@ -683,10 +683,10 @@ blockade_2 = {
         exists = yes
     }
 
-    global_pop_militancy_modifier = 0.02       
-    global_pop_consciousness_modifier = 0.02
+    global_pop_militancy_modifier = 0.08       
+    global_pop_consciousness_modifier = 0.08
     import_cost = 0.4                          #+40% import costs                         
-    factory_input = 0.4                        #need 4% more input in factories
+    factory_input = 0.04                        #need 4% more input in factories
     icon = 16
 }
 
@@ -698,10 +698,10 @@ blockade_3 = {
         exists = yes
     }
 
-    global_pop_militancy_modifier = 0.03       
-    global_pop_consciousness_modifier = 0.03
+    global_pop_militancy_modifier = 0.12       
+    global_pop_consciousness_modifier = 0.12
     import_cost = 0.6                          #+60% import costs                         
-    factory_input = 0.6                        #need 6% more input in factories
+    factory_input = 0.06                        #need 6% more input in factories
     icon = 16
 }
 
@@ -713,10 +713,10 @@ blockade_4 = {
         exists = yes
     }
 
-    global_pop_militancy_modifier = 0.04       
-    global_pop_consciousness_modifier = 0.04
+    global_pop_militancy_modifier = 0.16       
+    global_pop_consciousness_modifier = 0.16
     import_cost = 0.8                          #+80% import costs                         
-    factory_input = 0.8                        #need 8% more input in factories
+    factory_input = 0.08                        #need 8% more input in factories
     icon = 16
 }
 
@@ -727,8 +727,8 @@ blockade_5 = {
         exists = yes
     }
 
-    global_pop_militancy_modifier = 0.05       #god this sucks I'm pissed
-    global_pop_consciousness_modifier = 0.05   #maybe war is bad guys
+    global_pop_militancy_modifier = 0.2       #god this sucks I'm pissed
+    global_pop_consciousness_modifier = 0.2   #maybe war is bad guys
     import_cost = 1                            #doubled import costs
     factory_input = 0.1                        #need 10% more input in factories
     icon = 16

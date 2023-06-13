@@ -115,6 +115,7 @@ distribution_channels = {
     }
     effect = {
         factory_cost = -0.01
+        farm_rgo_eff = 0.3
     }
 }
 #investment_banks
